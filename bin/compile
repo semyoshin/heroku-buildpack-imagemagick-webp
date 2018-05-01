@@ -74,15 +74,16 @@ mkdir -p $VENDOR_DIR
   IMAGE_MAGICK_URL="http://www.imagemagick.org/download/releases/$IMAGE_MAGICK_FILE"
 
   echo "-----> Downloading ImageMagick from $IMAGE_MAGICK_URL"
-  wget $IMAGE_MAGICK_URL -P $BUILD_DIR | indent
+  #wget $IMAGE_MAGICK_URL -P $BUILD_DIR
+  wget $IMAGE_MAGICK_URL
   
   echo "-----> Extracting ImageMagick from $BUILD_DIR/$IMAGE_MAGICK_FILE"
-  if [ ! -f $BUILD_DIR/$IMAGE_MAGICK_FILE ]; then
-    echo "Error: Unable to download image magick" | indent
-    ls $BUILD_DIR | indent
+  if [ ! -f $IMAGE_MAGICK_FILE ]; then
+    echo "Error: Unable to download image magick"
+    ls
     exit 1;
   fi
-  tar xvf $BUILD_DIR/$IMAGE_MAGICK_FILE | indent
+  tar xvf $IMAGE_MAGICK_FILE
 
   echo "-----> Building ImageMagick"
   cd $IMAGE_MAGICK_DIR
