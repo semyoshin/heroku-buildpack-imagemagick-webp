@@ -10,7 +10,7 @@ CACHE_FILE="$CACHE_DIR/imagemagick-webp.tar.xz"
 mkdir -p $CACHE_DIR
 mkdir -p $VENDOR_DIR
 
-if [ ! -f $CACHE_FILE ]; then
+if [ -f $CACHE_FILE ]; then
 
   cd $BUILD_DIR
 
@@ -117,6 +117,6 @@ echo "-----> Updating environment variables"
 PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick-webp.sh"
 ACTUAL_INSTALL_PATH="$HOME/vendor/imagemagick-webp"
 mkdir -p $(dirname $PROFILE_PATH)
-echo "export CPATH=$CPATH:$ACTUAL_INSTALL_PATH/include" >> $PROFILE_PATH
+echo "export CPATH=$CPATH:$ACTUAL_INSTALL_PATH/include:$INSTALL_DIR/include" >> $PROFILE_PATH
 echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
 echo "export LD_LIBRARY_PATH=$ACTUAL_INSTALL_PATH/lib:\$LD_LIBRARY_PATH" >> $PROFILE_PATH
