@@ -10,7 +10,7 @@ CACHE_FILE="$CACHE_DIR/imagemagick-webp.tar.xz"
 mkdir -p $CACHE_DIR
 mkdir -p $VENDOR_DIR
 
-if [ -f $CACHE_FILE ]; then
+if [ ! -f $CACHE_FILE ]; then
 
   cd $BUILD_DIR
 
