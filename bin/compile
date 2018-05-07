@@ -119,9 +119,9 @@ export C_FLAGS="-I$INSTALL_DIR/include -L$INSTALL_DIR/lib -E -v --trace"
 echo $C_FLAGS
 echo $BUILD_DIR
 
-ln -s $INSTALL_DIR/include /app/vendor/imagemagick-webp/include
+ln -s $VENDOR_DIR/imagemagick-webp /app/vendor/imagemagick-webp
 
-ls /app/vendor/imagemagick-webp/include
+ls /app/vendor/imagemagick-webp
 
 echo "---TEMP DIR---"
 ls /tmp/
