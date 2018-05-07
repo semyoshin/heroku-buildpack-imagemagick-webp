@@ -119,6 +119,8 @@ export C_FLAGS="-I$INSTALL_DIR/include -L$INSTALL_DIR/lib -E -v --trace"
 echo $C_FLAGS
 echo $BUILD_DIR
 
+ls /app
+
 PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick-webp.sh"
 ACTUAL_INSTALL_PATH="$HOME/vendor/imagemagick-webp"
 mkdir -p $(dirname $PROFILE_PATH)
