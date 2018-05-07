@@ -124,8 +124,8 @@ ln -s $VENDOR_DIR/imagemagick-webp /app/vendor/imagemagick-webp
 
 ls /app/vendor/imagemagick-webp
 
-echo "---TEMP DIR---"
-ls /tmp/
+echo "---- lib dir -----"
+ls /app/vendor/imagemagick-webp/lib
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick-webp.sh"
 ACTUAL_INSTALL_PATH="$HOME/vendor/imagemagick-webp"
@@ -135,4 +135,4 @@ echo "export CPATH=$CPATH:$ACTUAL_INSTALL_PATH/include:$INSTALL_DIR/include" >> 
 echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
 echo "export LD_LIBRARY_PATH=$ACTUAL_INSTALL_PATH/lib:\$LD_LIBRARY_PATH" >> $PROFILE_PATH
 
-/usr/bin/ld -lwebp --verbose
+#/usr/bin/ld -lwebp --verbose
