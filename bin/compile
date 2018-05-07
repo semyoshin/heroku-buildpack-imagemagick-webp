@@ -134,3 +134,5 @@ echo "export C_FLAGS=\"-I$INSTALL_DIR/include -L$INSTALL_DIR/lib -E -v --trace\"
 echo "export CPATH=$CPATH:$ACTUAL_INSTALL_PATH/include:$INSTALL_DIR/include" >> $PROFILE_PATH
 echo "export PATH=$ACTUAL_INSTALL_PATH/bin:\$PATH" >> $PROFILE_PATH
 echo "export LD_LIBRARY_PATH=$ACTUAL_INSTALL_PATH/lib:\$LD_LIBRARY_PATH" >> $PROFILE_PATH
+
+/usr/bin/ld -lwebp --verbose
