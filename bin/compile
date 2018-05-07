@@ -120,6 +120,8 @@ echo $C_FLAGS
 echo $BUILD_DIR
 
 ls /app/vendor
+echo "---TEMP DIR---"
+ls /tmp/
 
 PROFILE_PATH="$BUILD_DIR/.profile.d/imagemagick-webp.sh"
 ACTUAL_INSTALL_PATH="$HOME/vendor/imagemagick-webp"
