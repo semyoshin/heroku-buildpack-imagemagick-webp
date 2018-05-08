@@ -116,15 +116,15 @@ fi
 
 echo "-----> Updating environment variables"
 
-export C_FLAGS="-I$INSTALL_DIR/include -L$INSTALL_DIR/lib"
-export LD_FLAGS="-L$INSTALL_DIR/lib"
-echo $C_FLAGS
-echo $LD_FLAGS
+#export C_FLAGS="-I$INSTALL_DIR/include -L$INSTALL_DIR/lib"
+#export LD_FLAGS="-L$INSTALL_DIR/lib"
+#echo $C_FLAGS
+#echo $LD_FLAGS
 
 #echo $BUILD_DIR
 
-#ln -s $VENDOR_DIR/imagemagick-webp /app/vendor/imagemagick-webp
-#ls /app/vendor/imagemagick-webp
+ln -s $VENDOR_DIR/imagemagick-webp /app/vendor/imagemagick-webp
+ls /app/vendor/imagemagick-webp
 
 #echo "---- lib dir -----"
 #ls /app/vendor/imagemagick-webp/lib
